@@ -1,6 +1,5 @@
 
-# README.md TEMPLATE
-## A template for what erikpersson0884/vecka.chalmers.it repos README.md file should look like
+# vecka.chalmers.it
 
 ![Github version](https://img.shields.io/badge/version-0.1.0-darkblue?style=flat-square)
 ![GitHub repo size](https://img.shields.io/github/repo-size/erikpersson0884/vecka.chalmers.it?color=blue&style=flat-square)
