@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>weekIT</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="colorPicker.js" defer></script>
+</head>
+<body>
+    <h1 id="weekHeader"></h1>
+
+
+    <div id="colorDiv" class="colorDiv">
+        <div class="colorPickers">
+            <label for="backgroundColorPicker" class="sr-only">Background color picker</label>
+            <input type="color" id="backgroundColorPicker" class="colorPicker">
+            <div id="backgroundColorPreview" class="colorPreview"></div>
+
+            <label for="contrastColorPicker" class="sr-only">Background color picker</label>
+            <input type="color" id="contrastColorPicker" class="colorPicker">
+            <div id="contrastColorPreview" class="colorPreview"></div>
+
+        </div>
+        <button id="resetColorPickers" class="button">Återställ</button>
+    </div>
+
+</body>
+</html>

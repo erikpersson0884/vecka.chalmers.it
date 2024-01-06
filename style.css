@@ -1,0 +1,113 @@
+:root {
+    --background-color: #111317; /* Default color for background*/
+    --contrast-color: #be1313; /* Default color for bookVev button and IT text*/
+  }
+  
+   /* Code for main html tags */
+  
+  body {
+    background-color: var(--background-color);
+    font-size: 18px;
+
+
+
+    min-height: 100vh;
+}
+
+.center-container {
+    
+}
+h1 {
+    color: var(--contrast-color);
+
+    font-family: Arial, serif;
+    font-size: 10rem;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 0;
+
+}
+
+
+.button {
+    font-size: 1.2rem;
+
+    min-width: 48px; /* Adjust to your preferred width */
+    min-height: 48px; /* Adjust to your preferred height */
+    border-radius: .4rem;
+  }
+
+
+
+
+
+
+/* Code for color picker */
+
+.colorDiv {
+    position: absolute;
+    left: .8rem;
+    bottom: .8rem;  
+    z-index: 40;
+  }
+  
+  .colorPickers {
+    display: flex;
+    gap: .5rem;
+  }
+
+  .colorPickers label {
+    display: none;
+  }
+  
+  .colorPicker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none; /* Disable pointer events for hidden inputs */
+    z-index: 0;
+  }
+  
+  
+  
+  .colorPreview {
+    width: 3rem;
+    height: 1.35rem;
+    padding: 0.0625rem 0.125rem;
+    border: 0.25rem solid #ccc;
+    border-radius: .2rem;
+  
+    cursor: pointer;
+    z-index: 4;
+  }
+  
+  #backgroundColorPreview:hover {
+    animation: background-rainbow 5s linear infinite;
+  }
+  #contrastColorPreview:hover {
+    animation: contrast-rainbow 5s linear infinite;
+  }
+  
+  #backgroundColorPreview {
+    background: var(--background-color);
+  }
+  #contrastColorPreview {
+    background: var(--contrast-color);
+  }
+  
+  
+  
+  #resetColorPickers {
+    background-color: var(--contrast-color);
+  
+    width: 100%;
+    margin-top: .4rem;
+  }
+  
+  #resetColorPickers:hover {
+    background: #be1313;
+  }
