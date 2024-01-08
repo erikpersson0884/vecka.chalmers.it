@@ -1,26 +1,21 @@
-function getISOWeekNumber(date) {
-    // Copy the date object to avoid modifying the original date
-    const newDate = new Date(date);
-    
-    // Set the date to the first day of the year
-    newDate.setMonth(0, 1);
-  
-    // Get the day of the week for the first day of the year
-    const dayOfWeek = newDate.getDay();
-  
-    // Move to the first Thursday of the year
-    newDate.setDate(1 + (dayOfWeek <= 4 ? 4 - dayOfWeek : 11 - dayOfWeek));
-  
-    // Calculate the week number
-    const weekNumber = Math.ceil((((date - newDate) / 86400000) + 1) / 7);
-  
-    return weekNumber;
-  }
-  
-  // Example usage:
-  const currentDate = new Date();
-  const weekNumber = getISOWeekNumber(currentDate);
-  console.log("ISO Week Number:", weekNumber);
+function getWeekNumber() {
+  date = new Date();
+  date.setHours(0, 0, 0, 0);
+  // Set to nearest Thursday: current date + 4 - current day number
+  // Make Sunday's day number 7
+  date.setDate(date.getDate() + 4 - (date.getDay() || 7));
+  // Get first day of year
+  var yearStart = new Date(date.getFullYear(), 0, 1);
+  // Calculate full weeks to nearest Thursday
+  var weekNumber = Math.ceil((((date - yearStart) / 86400000) + 1) / 7);
+  return weekNumber;
+}
 
+function setWeekHeader() {
   const weekHeader = document.getElementById("weekHeader");
+  const weekNumber = getWeekNumber();
+
   weekHeader.textContent = weekNumber;
+}
+
+setWeekHeader();
