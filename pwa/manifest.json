@@ -9,7 +9,9 @@
         {
             "src": "calendar.svg",
             "sizes": "any",
-            "type": "image/svg+xml"
+            "type": "image/svg+xml",
+            "purpose": "maskable"
+
         },
         {
           "src": "windows11/SmallTile.scale-100.png",
