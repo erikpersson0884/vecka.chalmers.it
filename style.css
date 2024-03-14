@@ -1,19 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Kode+Mono:wght@400..700&family=Koulen&family=Rubik+Mono+One&display=swap');
-
-:root {
-    --backgroundColor: none; /* Default color for background*/
-    --contrastColor: none; /* Default color for bookVev button and IT text*/
-}
   
 body {
-    background-color: var(--background-color);
     font-size: 18px;
 
     min-height: 100vh;
 }
 
 h1 {
-    color: var(--contrast-color);
+    color: none;
 
     font-family: Arial, "Kode mono", serif;
     font-size: 10rem;
@@ -100,7 +94,7 @@ button {
 
 @keyframes background-rainbow {
     0% {
-        background: var(--background-color);
+        background: inherit;
     }
     14% {
         background: orange;
@@ -127,7 +121,6 @@ button {
   
   @keyframes contrast-rainbow {
     0% {
-        background: var(--contrast-color);
     }
     14% {
         background: orange;

@@ -31,17 +31,6 @@ function setContrastColor(color) {
 }
 
 
-if (localStorage.getItem("backgroundColor")) {
-    const color = localStorage.getItem("backgroundColor");
-    setBackgroundColor(color);
-}
-
-if (localStorage.getItem("contrastColor")) {
-    const color = localStorage.getItem("contrastColor");
-    setContrastColor(color);
-}
-
-
 
 // Trigger the custom color pickers when the previews is clicked
 backgroundColorPreview.addEventListener("click", function() {
@@ -71,6 +60,14 @@ resetColorPickers.addEventListener("click", () => {
 function resetColors(){
     setBackgroundColor(standardBackgroundColor);
     setContrastColor(standardContrastColor);
+
     backgroundColorPicker.value = standardBackgroundColor;
     contrastColorPicker.value = standardContrastColor;
+
+    localStorage.removeItem("backgroundColor");
+    localStorage.removeItem("contrastColor");
 }
+
+
+setBackgroundColor(localStorage.getItem("backgroundColor") || standardBackgroundColor);
+setContrastColor(localStorage.getItem("contrastColor") || standardContrastColor);
