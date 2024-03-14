@@ -7,7 +7,7 @@
     "theme_color": "#09cdda",
     "icons": [
         {
-            "src": "caledar.svg",
+            "src": "calendar.svg",
             "sizes": "any",
             "type": "image/svg+xml"
         }
