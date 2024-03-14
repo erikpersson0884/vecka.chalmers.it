@@ -33,8 +33,10 @@ footer * {
     color: #ffffff; /* Change link color */
 }
 
+
 .pixelnheart {
     height: 1rem;
+    width: auto;
 
     vertical-align: middle; /* Adjust alignment as needed */
 }
@@ -43,6 +45,7 @@ footer * {
     transform: rotate(360deg);
     transition: transform 0.5s; /* Add a transition for a smooth effect */
 }
+
 
 .goken {
     color: var(--contrast-color);
