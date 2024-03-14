@@ -19,3 +19,12 @@ function setWeekHeader() {
 }
 
 setWeekHeader();
+
+
+
+setTimeout(() => {
+  const footer = document.getElementsByTagName("footer")[0];
+  console.log(footer)
+
+  footer.classList.add("footer--hidden");
+}, 3000)
