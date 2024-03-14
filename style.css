@@ -1,26 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Kode+Mono:wght@400..700&family=Koulen&family=Rubik+Mono+One&display=swap');
+
 :root {
-    --background-color: #111317; /* Default color for background*/
-    --contrast-color: #be1313; /* Default color for bookVev button and IT text*/
-  }
+    --backgroundColor: none; /* Default color for background*/
+    --contrastColor: none; /* Default color for bookVev button and IT text*/
+}
   
-   /* Code for main html tags */
-  
-  body {
+body {
     background-color: var(--background-color);
     font-size: 18px;
-
-
 
     min-height: 100vh;
 }
 
-.center-container {
-    
-}
 h1 {
     color: var(--contrast-color);
 
-    font-family: Arial, serif;
+    font-family: Arial, "Kode mono", serif;
     font-size: 10rem;
     text-align: center;
 
@@ -29,21 +24,11 @@ h1 {
     align-items: center;
     height: 100vh;
     margin-top: 0;
-
 }
 
-
-.button {
-    font-size: 1.2rem;
-
-    min-width: 48px; /* Adjust to your preferred width */
-    min-height: 48px; /* Adjust to your preferred height */
-    border-radius: .4rem;
-  }
-
-
-
-
+.hidden {
+    visibility: hidden;
+}
 
 
 /* Code for color picker */
@@ -53,28 +38,30 @@ h1 {
     left: .8rem;
     bottom: .8rem;  
     z-index: 40;
-  }
+}
   
-  .colorPickers {
+.colorPickers {
     display: flex;
     gap: .5rem;
-  }
+}
 
-  .colorPickers label {
-    display: none;
-  }
-  
-  .colorPicker {
+.colorPicker {
     position: absolute;
     left: 0;
     top: 0;
-    pointer-events: none; /* Disable pointer events for hidden inputs */
+    pointer-events: none;
     z-index: 0;
-  }
+}
+  
+button {
+    font-size: 1.2rem;
+
+    height: 2.66rem;
+    border-radius: .4rem;
+}
   
   
-  
-  .colorPreview {
+.colorPreview {
     width: 3rem;
     height: 1.35rem;
     padding: 0.0625rem 0.125rem;
@@ -83,31 +70,84 @@ h1 {
   
     cursor: pointer;
     z-index: 4;
-  }
+}
   
-  #backgroundColorPreview:hover {
+#backgroundColorPreview:hover {
     animation: background-rainbow 5s linear infinite;
-  }
-  #contrastColorPreview:hover {
+}
+#contrastColorPreview:hover {
     animation: contrast-rainbow 5s linear infinite;
-  }
+}
   
-  #backgroundColorPreview {
-    background: var(--background-color);
-  }
-  #contrastColorPreview {
-    background: var(--contrast-color);
-  }
+
+#backgroundColorPreview {
+    background: inherit
+}
   
   
-  
-  #resetColorPickers {
-    background-color: var(--contrast-color);
-  
+#resetColorPickers {  
     width: 100%;
     margin-top: .4rem;
-  }
+}
+
+#resetColorPickers:active {
+    transform: translateY(1px);
+}
+
+
+
+/* Animation for color picker */
+
+@keyframes background-rainbow {
+    0% {
+        background: var(--background-color);
+    }
+    14% {
+        background: orange;
+    }
+    28% {
+        background: yellow;
+    }
+    42% {
+         background: green;
+    }
+    57% {
+         background: blue;
+    }
+    71% {
+        background: indigo;
+    }
+    85% {
+        background: violet;
+    }
+    100% {
+        background: red;
+    }
+}
   
-  #resetColorPickers:hover {
-    background: #be1313;
-  }
+  @keyframes contrast-rainbow {
+    0% {
+        background: var(--contrast-color);
+    }
+    14% {
+        background: orange;
+    }
+    28% {
+        background: yellow;
+    }
+    42% {
+        background: green;
+    }
+    57% {
+        background: blue;
+    }
+    71% {
+        background: indigo;
+    }
+    85% {
+        background: violet;
+    }
+    100% {
+        background: red;
+    }
+}

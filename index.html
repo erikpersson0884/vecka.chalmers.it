@@ -2,7 +2,12 @@
 <html>
 <head>
     <title>weekIT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="calendar.svg" type="image/x-icon">
+
     <link rel="stylesheet" href="style.css">
+
     <script src="script.js" defer></script>
     <script src="colorPicker.js" defer></script>
 </head>
@@ -12,16 +17,14 @@
 
     <div id="colorDiv" class="colorDiv">
         <div class="colorPickers">
-            <label for="backgroundColorPicker" class="sr-only">Background color picker</label>
-            <input type="color" id="backgroundColorPicker" class="colorPicker">
+            <input type="color" id="backgroundColorPicker" class="colorPicker hidden">
             <div id="backgroundColorPreview" class="colorPreview"></div>
 
-            <label for="contrastColorPicker" class="sr-only">Background color picker</label>
-            <input type="color" id="contrastColorPicker" class="colorPicker">
+            <input type="color" id="contrastColorPicker" class="colorPicker hidden">
             <div id="contrastColorPreview" class="colorPreview"></div>
 
         </div>
-        <button id="resetColorPickers" class="button">Återställ</button>
+        <button id="resetColorPickers" class="button">Reset Colors</button>
     </div>
 
 </body>
